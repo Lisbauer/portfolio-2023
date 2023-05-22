@@ -1,0 +1,57 @@
+.nav-container{
+    font-family: 'Prompt', sans-serif;
+}
+.bg{
+  background-attachment: fixed;
+    height: 940px;
+    background-image: url(../../public/images/night2-bg.jpg);
+    background-size: cover;
+}  
+.li-container{
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    background-color: rgba(35, 0, 52, 0.589);
+}
+.nav-links {
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-links li{  
+    height: 48px;
+    text-align: center;
+    padding-top: 10px;
+    color: white; 
+    margin: 20px;
+    letter-spacing: 2px;
+    position: relative;
+}
+.nav-links li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(251, 255, 128);
+    transform: scaleX(0); 
+    transform-origin: right; 
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav-links li:hover::before {
+    transform: scaleX(1); 
+    transform-origin: left; 
+  }
+
+li {
+    transition: 0.2s ease-in-out;
+  }
+  
+  li:hover {
+    transform: scale(1.1);
+    color: rgb(251, 255, 128);
+  }

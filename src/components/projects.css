@@ -1,0 +1,11 @@
+.project-container{
+    height: 960px;    
+    background-image: url(../../public/images/day-bg.png); 
+    background-size: cover;
+}
+.project-img{
+    width: 300px;
+    margin: 20px;
+    transition: 1s;
+    position: relative;
+}
