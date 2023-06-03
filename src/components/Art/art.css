@@ -1,6 +1,6 @@
 .imagelist-container{
   height: 100vh;
-  background-image: url(../../public/images/askyfullofstars2.png);
+  background-image: url(../../../public/images/askyfullofstars2.png);
   background-size: cover;
   position: relative;
   justify-content: center;
@@ -87,12 +87,14 @@
   position: absolute;
   top: 87%;
   left: 27%;
-  z-index: 999;
+  z-index: 999; 
 }
 .box-art p{
   font-size: 19px;
   margin: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 3px; 
+  font-family: 'Geologica', sans-serif;
+  font-weight: 100;
 }
 .box-art{
   position: relative;
@@ -168,11 +170,14 @@
 }
 .details-p{
   position: absolute;
-  top: 53%;
-  left: 14.4%;
+  width: 200px;
+  top: 52%;
+  left: 15%;
   font-size: 20px;
   z-index: 999;
-  letter-spacing: 1px;
+  letter-spacing: 1px;  
+  font-family: 'Geologica', sans-serif;
+  font-weight: 100;
 }
 @media (max-width: 1400px) {
   .imagelist-container{

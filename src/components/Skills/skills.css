@@ -8,8 +8,9 @@
     font-size: 35px;
     margin-top: 0;
     padding: 90px;
-    font-weight: 800;
-    letter-spacing: 10px;
+    font-weight: 100;
+    letter-spacing: 10px;    
+    font-family: 'Geologica', sans-serif;
 }
 .skills-section{
     display: grid;

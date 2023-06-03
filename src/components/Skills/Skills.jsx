@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 import "./skills.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
@@ -10,9 +11,10 @@ import { faSass } from "@fortawesome/free-brands-svg-icons";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
 import { faNode } from "@fortawesome/free-brands-svg-icons";
-import "./fonts.css";
+import "../fonts.css";
 
-const skills = () => {
+const Skills = () => {
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
   return (
     <div className="skills-container">
       <div className="tools-box">
@@ -21,7 +23,7 @@ const skills = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          TECHNOLOGIES I AM FAMILIAR WITH
+          {isEnglish ? "TECHNOLOGIES I AM FAMILIAR WITH" : "TECNOLOGÍAS CON LAS QUE ESTOY FAMILIARIZADA"}
         </h2>
       </div>
 
@@ -131,4 +133,4 @@ const skills = () => {
   );
 };
 
-export default skills;
+export default Skills;

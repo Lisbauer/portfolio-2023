@@ -1,11 +1,13 @@
-import * as React from 'react';
+import React, { useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import './art.css'
-import './fonts.css'
-import './aboutMe.css'
+import '../fonts.css'
+import '../AboutMe/aboutMe.css'
 
 function srcset(image, size, rows = 1, cols = 1) {
+  
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
     srcSet: `${image}?w=${size * cols}&h=${
@@ -15,9 +17,10 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 export default function QuiltedImageList() {
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
   return (
     <div className='imagelist-container'>
-        <h2 className='art-text'> MY ART GALLERY</h2>
+        <h2 className='art-text'>{isEnglish ? "MY ART GALLERY" : "GALERÍA DE ARTE"}</h2>
     <ImageList className='imagelist2'
      sx={{ width: 600, height: 650, overflowX:"hidden",
       "@media (max-width: 500px)": {
@@ -49,12 +52,11 @@ export default function QuiltedImageList() {
     <div className="box-art">
             <span></span>
             <div className="content">
-              <p>
-                I have experience using software such as Photoshop, Paint tool SAI, Adobe After Effects, Sony Vegas and Cinema 4D.
+              <p>{isEnglish ? "I have experience using software such as Photoshop, Paint tool SAI, Adobe After Effects, Sony Vegas and Cinema 4D." : "Tengo experiencia utilizando programas como Photoshop, Paint Tool SAI, Adobe After Effects, Sony Vegas y Cinema 4D."}
               </p>
             </div>
           </div>
-          <p className='details-p'>Beauty lies in <br /> the smallest of details.</p>
+          <p className='details-p'>{isEnglish ? "Beauty lies in the smallest of details." : "La belleza está en los pequeños detalles."}</p>
           <img className="bubbletalk"
           src="../../images/bubletalk.png"
           alt="bubble talk" />

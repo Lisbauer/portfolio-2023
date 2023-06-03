@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 import "./certificate.css";
-import "./fonts.css";
+import "../fonts.css";
 
 const Certificate = () => {
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
   return (
     <div className="certificate-container">
-      <h2 data-aos="fade-down">MY CERTIFICATES</h2>
+      <h2 data-aos="fade-down">{isEnglish ? "MY CERTIFICATES" : "MIS CERTIFICADOS"}</h2>
       <div className="certificate-images">
         <div className="two-img">
           <img
@@ -29,7 +31,7 @@ const Certificate = () => {
 
           <img
             className="cert-img"
-            src="../../images/frontend-cert.png"
+            src={isEnglish ? "../../images/certcarr-en.png" : "../../images/certcarr-es.png"}
             alt="picture"
           />
         </div>

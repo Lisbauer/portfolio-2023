@@ -2,7 +2,7 @@
 .intro-container{
     position: relative;
     height: 100vh;    
-    background-image: url(../../public/images/purplenight.png);    
+    background-image: url(../../../public/images/purplenight.png);    
     overflow: hidden;
 }
 .section-intro{
@@ -373,7 +373,7 @@
     content: '';
     position: absolute;
     inset: 4px;
-    background-image:  url(../../public/images/moonanime.png);
+    background-image:  url(../../../public/images/moonanime.png);
     transition: 0.5s;
 }
 .explore:hover::after{

@@ -1,6 +1,6 @@
 
 .container-max{
-    background-image: url(../../public/images/cloud2.png); 
+    background-image: url(../../../public/images/night2-bg.jpg); 
     background-size: cover; 
     background-color: rgb(0, 0, 0);
     position: absolute;
@@ -62,7 +62,7 @@
     font-size: 2em;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     height: 20px;
     font-weight: 100;
 }
@@ -87,14 +87,12 @@
     padding: 25px 10px 7.5px;
     border-radius: 4px;
     color: #000000;
-    font-weight: 500;
-    font-size: 18px;
-    
+    font-size: 17px;  
+    font-family: 'Geologica', sans-serif
 }
 .container-max .contact-container .content-contact .form .input-box-message{
     position: relative;
     width: 100%; 
-
 }
 .container-max .contact-container .content-contact .form .input-box input{
     position: relative;
@@ -105,8 +103,9 @@
     padding: 25px 10px 7.5px;
     border-radius: 4px;
     color: #000000;
-    font-weight: 500;
     font-size: 18px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
 }
 
 .container-max .contact-container .content-contact .form .input-box i{

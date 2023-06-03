@@ -1,13 +1,14 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Certificate from "./components/Certificate";
-import Projects from "./components/Projects";
-import Art from "./components/Art";
-import Intro from "./components/Intro";
+import { LanguageProvider } from "./components/LanguageContext";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
+import Certificate from "./components/Certificate/Certificate";
+import Projects from "./components/Projects/Projects";
+import Art from "./components/Art/Art";
+import Intro from "./components/Intro/Intro";
 import Rocket from "./components/Rocket";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./components/rocket.css";
@@ -15,6 +16,7 @@ import "./components/rocket.css";
 function App() {
   return (
     <Router>
+      <LanguageProvider>
       <div className="App">
         <div id="intro">
           <Routes>
@@ -77,6 +79,7 @@ function App() {
           </div>
         </div>
       </div>
+      </LanguageProvider>
     </Router>
   );
 }

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 import "./contact.css";
-import "./fonts.css";
+import "../fonts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
@@ -10,6 +11,7 @@ import emailjs from "emailjs-com";
 emailjs.init("c-8emIEBk9zCo1zHo");
 
 const Contact = () => {
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
   const [selectedNombre, setSelectedNombre] = useState("");
   const [selectedCorreo, setSelectedCorreo] = useState("");
   const [selectedAsunto, setSelectedAsunto] = useState("");
@@ -230,7 +232,7 @@ const Contact = () => {
 
       <div className="contact-container" data-aos="fade-down">
         <div className="content-contact">
-          <h2>CONTACT ME</h2>
+          <h2>{isEnglish ? "CONTACT ME" : "CONTÁCTAME"}</h2>
           <div className="form">
             <div className="input-box">
               <input
@@ -245,7 +247,7 @@ const Contact = () => {
                 }}
                 onChange={(event) => setSelectedNombre(event.target.value)}
               />
-              <i>Name</i>
+              <i>{isEnglish ? "Name" : "Nombre"}</i>
             </div>
 
             <div className="input-box">
@@ -277,7 +279,7 @@ const Contact = () => {
                 }}
                 onChange={(event) => setSelectedAsunto(event.target.value)}
               />
-              <i>Asunto</i>
+              <i>{isEnglish ? "Subject" : "Asunto"}</i>
             </div>
 
             <div className="input-box-message" value={selectedMensaje}>
@@ -291,15 +293,15 @@ const Contact = () => {
                 }}
                 onChange={(event) => setSelectedMensaje(event.target.value)}
               ></textarea>
-              <i>Message</i>
+              <i>{isEnglish ? "Message" : "Mensaje"}</i>
             </div>
 
             <div className="input-box">
-              <button onClick={sendForm}>SEND</button>
+              <button onClick={sendForm}>{isEnglish ? "SEND" : "ENVIAR"}</button>
             </div>
             <div className="btn-p">
               {showValidationError && (
-                <p className="error-p">Complete todos los campos por favor</p>
+                <p className="error-p">{isEnglish ? "Please fill out all the required fields." : "Complete todos los campos por favor."}</p>
               )}
               {showMessage && (
                 <div
@@ -313,7 +315,7 @@ const Contact = () => {
                     src="../../images/astro5.png"
                     alt="astro message"
                   />
-                  <p className="success-p">Mensaje enviado</p>
+                  <p className="success-p">{isEnglish ? "Message sent." : "Mensaje enviado."}</p>
                   <button className="modal-close" onClick={closeModal}>
                     Ok
                   </button>
@@ -325,19 +327,19 @@ const Contact = () => {
 
         <ul className="effect3">
           <li className="red-li" style={{ "--clr": "#00afff" }}>
-            <a href="linkedin.com" alt="linkedin-icon">
+            <a href="https://www.linkedin.com/in/lisbauer/" target="blank" alt="linkedin-icon">
               <FontAwesomeIcon className="fonticon" icon={faLinkedin} />
               <span className="icon-span">Linkedin</span>
             </a>
           </li>
           <li className="red-li" style={{ "--clr": "#b900ff" }}>
-            <a href="linkedin.com" alt="linkedin-icon">
+            <a href="https://github.com/Lisbauer" target="blank" alt="github-icon">
               <FontAwesomeIcon className="fonticon" icon={faSquareGithub} />
               <span className="icon-span">Github</span>
             </a>
           </li>
           <li className="red-li" style={{ "--clr": "#8fce00" }}>
-            <a href="linkedin.com" alt="linkedin-icon">
+            <a href="mailto:lisabauer.dev@gmail.com" target="blank" alt="gmail-icon">
               <FontAwesomeIcon className="fonticon" icon={faEnvelope} />
               <span className="icon-span">Gmail</span>
             </a>

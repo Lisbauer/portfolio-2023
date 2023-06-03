@@ -10,15 +10,17 @@
     top: 28%;
     color: white;
     letter-spacing: 16px;
-    font-size: 24px;
-    font-family: 'Karla', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    font-family: 'Geologica', sans-serif;
 }
 .secondary-text{
     color: white;
     position: absolute;
     top: 45%;
     font-size: 17px;
-    font-family: 'Karla', sans-serif;
+    font-weight: 100;
+    font-family: 'Geologica', sans-serif;
     letter-spacing: 17px;
 }
 .frontend-box{
@@ -161,7 +163,7 @@
     color: rgba(169, 103, 255, 0);
     -webkit-text-stroke: 1px rgba(255, 251, 255, 0.986);
     -webkit-background-clip: text;
-    background-image:  url(../../public/images/back2.png);
+    background-image:  url(../../../public/images/back2.png);
     background-position: 0 0;
     animation: back 30s linear infinite;   
     position: absolute;

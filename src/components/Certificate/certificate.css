@@ -1,6 +1,6 @@
 .certificate-container {
   height: 950px;
-  background-image: url(../../public/images/nighttransparent.png); 
+  background-image: url(../../../public/images/nighttransparent.png); 
   background-size: cover;
   display: flex;
   justify-content: center;

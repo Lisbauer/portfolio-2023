@@ -3,19 +3,19 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../../public/images/cloud2.png); 
+    background-image: url(../../../public/images/cloud2.png); 
     flex-direction: column;
     position: relative; 
 }
 .project-text{
     color: rgb(255, 255, 255);
     font-size: 3.5em;
-    letter-spacing: 17px;
+    letter-spacing: 16px;
     position: absolute; 
     top: 5%; 
     right: 6%; 
     transform: translate(-50%, -50%);
-    font-family: 'La Belle Aurore', cursive;
+    font-family: 'Geologica', sans-serif;
 }
  /* PORTFOLIO SIGN*/ 
  .myproject{
@@ -28,6 +28,7 @@
     height: 90px;   
     padding-top: 15px;
     letter-spacing: 2px;
+    font-family: 'Geologica', sans-serif;
 }
 .myproject span{
     font-size: 55px;
@@ -82,7 +83,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 100px 50px;
-    padding: 100px 50px;
+    padding: 100px 50px;    
+    font-family: 'Geologica', sans-serif;
 }
 .project-container .project-card{
     margin-top: 60px;
