@@ -1,64 +1,79 @@
-import React, { useEffect, useState } from 'react'
-import './home.css'
+import React, { useState } from "react";
+import "./home.css";
+import "./fonts.css";
 
 const Home = () => {
-    const [activeIndex, setActiveIndex] = useState(-1);
+  const [rocketActive, setRocketActive] = useState(false);
 
-    const handleMouseEnter = (index) => {
-      setActiveIndex(index);
-    };
-  
-    const handleMouseLeave = () => {
-      setActiveIndex(-1);
-    };
-  
-    const letters = ['L', 'I', 'S', 'A', ' ', 'B', 'A', 'U', 'E', 'R'];
+  const handleClick = () => {
+    setRocketActive(true);
+    setTimeout(() => {
+      setRocketActive(false);
+    }, 7000);
+  };
+
   return (
     <div>
-        <section className='home-section'>
-            <div className='frontend-box'>
-            <h1 data-aos="fade-right" className='name-text' onMouseLeave={handleMouseLeave}>
-            {letters.map((letter, index) => (
-              <span
-                key={index}
-                onMouseEnter={() => handleMouseEnter(index)}
-                className={index <= activeIndex ? 'active' : ''}
-              >
-                {letter}
-              </span>
-            ))}
-          </h1>
-                <h2 className='frontend-text'> <span className='front-span'>FRONTEND</span>  <br/> <span className='dev-span'>DEVELOPER</span></h2>
-                
-                <div className='container-welcome'>
-        <span>W</span>
-        <span>E</span>
-        <span>L</span>
-        <span>C</span>
-        <span>O</span>
-        <span>M</span>
-        <span>E </span>
-        <span>T</span>
-        <span>O </span>
-        <span>M</span>
-        <span>Y </span>
-        <span>P</span>
-        <span>O</span>
-        <span>R</span>
-        <span>T</span>
-        <span>F</span>
-        <span>O</span>
-        <span>L</span>
-        <span>I</span>
-        <span>O</span>
-      </div>
-            </div>
-            <div>
-            <img className='giffy' src="../images/devgirl2.png" alt="" />
-            </div>
-        </section>
-        
-        <div className="bubbles">
+      <section className="stars-section">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </section>
+      <section className="home-section">
+        <div className="frontend-box">
+          <img className="astro2" src="../images/astro3.png" alt="" />
+          <h3 className="hi">HI, I'M</h3>
+          <h1 className="h1-intro"> LISA BAUER </h1>
+          <h3 className="secondary-text">AND I'M A </h3>
+          <h2 className="frontend-text">
+            {" "}
+            <span className="front-span">FRONTEND</span> <br />{" "}
+            <span className="dev-span">DEVELOPER</span>
+          </h2>
+
+          <div className="container-welcome">
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E </span>
+            <span>T</span>
+            <span>O </span>
+            <span>M</span>
+            <span>Y </span>
+            <span>P</span>
+            <span>O</span>
+            <span>R</span>
+            <span>T</span>
+            <span>F</span>
+            <span>O</span>
+            <span>L</span>
+            <span>I</span>
+            <span>O</span>
+          </div>
+        </div>
+      </section>
+
+      <div className="bubbles">
         <span style={{ "--i": 11 }}></span>
         <span style={{ "--i": 12 }}></span>
         <span style={{ "--i": 24 }}></span>
@@ -81,7 +96,7 @@ const Home = () => {
         <span style={{ "--i": 28 }}></span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

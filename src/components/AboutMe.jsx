@@ -1,5 +1,6 @@
 import React from "react";
 import "./aboutMe.css";
+import './fonts.css'
 
 const AboutMe = () => {
   return (
@@ -26,9 +27,7 @@ const AboutMe = () => {
           </a>
         </div></div>
 
-        <div className="container2"
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom">
+        <div className="container2">
           <div className="box2">
             <span></span>
             <div className="content">
@@ -64,16 +63,15 @@ const AboutMe = () => {
           <div className="box2">
             <span></span>
             <div className="content">
-              <h2>GET TO KNOW ME A LITTLE MORE!</h2>
+              <h2 className="gettoknowme">GET TO KNOW ME A LITTLE MORE!</h2>
               <p>
-                In my free time, I love playing Valorant. I've been a gamer
+                In my free time, I love playing videogames. I've been a gamer
                 since I was 15, so I'm very familiar with technology. I have two
                 cats who love to lean on my keyboard and erase my code. I'm
                 passionate about digital art, I've always wanted a graphics
                 tablet. My favorite place in the world is my workspace, as I
                 consider it incredibly useful and supportive in nurturing
-                inspiration. Lastly, I adore collecting figures from games and
-                anime.
+                inspiration.
               </p>
             </div>
           </div>

@@ -1,31 +1,3 @@
-/* RED BUTTONS*/
-
-/*EFFECT 1
-ul.effect1 li:hover::before{
-    inset: 15px;
-}
-ul.effect1 li:hover::after{
-    inset: -10px;
-}
-ul.effect1 li:hover a i,
-ul.effect1 li:hover a span{
-    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
-}
-/*EFFECT 2
-ul.effect2 li:hover::before{
-    inset: 15px;
-}
-ul.effect2 li:hover::after{
-    inset: 0px;
-    transform: rotate(0deg);
-}
-ul.effect2 li:hover a i,
-ul.effect2 li:hover a span{
-    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
-}*/
-
-
-
 /*EFFECT 3*/
 ul.effect3 .red-li:hover::before{
     inset: 15px;

@@ -1,6 +1,6 @@
 
 .container-max{
-    background-image: url(../../public/images/cyberpunk.jpg); 
+    background-image: url(../../public/images/cloud2.png); 
     background-size: cover; 
     background-color: rgb(0, 0, 0);
     position: absolute;
@@ -11,8 +11,9 @@
     gap: 2px;
     flex-wrap: wrap;
     overflow: hidden;
+    background-position: 0 0;
+    animation: moon 30s linear infinite; 
 }
-
 .container-max::before{
     content: '';
     position: absolute;
@@ -20,7 +21,6 @@
     height: 100%;
     background: linear-gradient(#000, rgba(255, 0, 166, 0.292), #000);
 }
-
 .container-max .bg-span{
     position: relative;
     display: block;
@@ -34,14 +34,12 @@
    background: rgba(255, 0, 217, 0.577);
    transition: 0.2s;
 }
-
-
-
 .container-max .contact-container{
     position: absolute;
     width: 500px;
+    height: 750px;
     background: rgba(50, 50, 50, 0.411);
-    z-index: 1000;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,18 +49,22 @@
 }
 .container-max .contact-container .content-contact{
     position: relative;
+    top: -70px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    padding-right: 14px;
 }
 .container-max .contact-container .content-contact h2{
     font-size: 2em;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 4px;
+    height: 20px;
+    font-weight: 100;
 }
 .container-max .contact-container .content-contact .form{
     width: 100%;
@@ -114,7 +116,7 @@
     padding: 15px 10px;
     font-style: normal;
     color: rgb(255, 0, 174);
-    transition: 0.5s;
+    transition: 0.3s;
     pointer-events: none;
 }
 .container-max .contact-container .content-contact .form .input-box-message i{
@@ -124,7 +126,7 @@
     padding: 15px 10px;
     font-style: normal;
     color: rgb(255, 0, 174);
-    transition: 0.5s;
+    transition: 0.2s;
     pointer-events: none;
 }
 
@@ -139,9 +141,7 @@
 .contact-container .content-contact .form .input-box input:valid ~ i{
    transform: translateY(-7.5px);
    font-size: 0.8em;
-
 }
-
 .container-max .content-contact .form .input-box button{
     padding: 10px;
     background: rgb(217, 0, 255);
@@ -161,131 +161,17 @@
     box-shadow: inset 5px 5px 2px rgba(0, 0, 0, 0.26) ;
     transition: 0.2s;
 }
-
-
-
-
-
-
-@media (max-width: 900px){
-    .container-max span{
-        width: calc(10vw - 2px);
-        height: calc(10vw - 2px);
-    }
-}
-
-/* RED BUTTONS
-:root{
-    --bg: #222
-}
-ul{
-    position: relative;
-    display: flex;
-    gap: 50px;
-}
-ul li{
-    position: relative;
-    list-style: none;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.5s;
-}
-ul li::before{
-    content: "";
-    position: absolute;
-    inset: 20px;
-    box-shadow: 0 0 0 10px var(--clr), 
-    0 0 0 20px var(--bg),
-    0 0 0 22px var(--clr);
-    transition: 0.5s;
-}
-ul li::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--bg);
-    transform: rotate(45deg);
-    transition: 0.5s;
-}
-ul li a{
-position: relative;
-text-decoration: none;
-z-index: 10;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-ul li a i{
-    font-size: 2em;
-    transition: 0.5s;
-    color: var(--clr);
-}
-ul li:hover a i{
-    transform: translateY(-25%);
-}
-ul li a span{
-    position: absolute;
-    color: var(--clr);
-    opacity: 0;
-    transition: 0.5s;
-    transform: scale(0) translateY(50%);
-}
-ul li:hover a span{
-    opacity: 1;
-    transform: scale(1) translateY(100%);
-}
-
-
-ul.effect1 li:hover::before{
-    inset: 15px;
-}
-ul.effect1 li:hover::after{
-    inset: -10px;
-}
-ul.effect1 li:hover a i,
-ul.effect1 li:hover a span{
-    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
-}
-
-ul.effect2 li:hover::before{
-    inset: 15px;
-}
-ul.effect2 li:hover::after{
-    inset: 0px;
-    transform: rotate(0deg);
-}
-ul.effect2 li:hover a i,
-ul.effect2 li:hover a span{
-    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
-}
-
-ul.effect3 li:hover::before{
-    inset: 15px;
-}
-ul.effect3 li:hover::after{
-    inset: 0px;
-    transform: rotate(0deg);
-    background: var(--clr);
-}
-ul.effect3 li:hover a i,
-ul.effect3 li:hover a span{
-    color: #fff;
-}
-
-*/
-
+/* redes sociales */
 :root{
     --bg: #38003eff;
 }
 .effect3{
-    position: relative;
+    position: absolute;
+    top: 85%;
+    left: 15%;
     display: flex;
     gap: 50px;
-    flex-direction: column;
+    flex-direction: row;
 }
 ul .red-li{
     position: relative;
@@ -316,12 +202,12 @@ ul .red-li::after{
     transition: 0.5s;
 }
 ul .red-li a{
-position: relative;
-text-decoration: none;
-z-index: 10;
-display: flex;
-justify-content: center;
-align-items: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ul .red-li a .fonticon{
     font-size: 2em;
@@ -353,4 +239,139 @@ ul .red-li:hover a .icon-span{
 .effect3 .red-li:hover a .fonticon,
 .effect3 .red-li:hover a .icon-span{
     color: #fff;
+}
+/* MODAL*/ 
+
+.modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 31%;
+    width: 500px;
+    height: 320px;
+    display: block;  
+    z-index: 6;
+    background: linear-gradient(315deg, rgba(255, 0, 128, 0.75), rgb(157, 0, 255));
+    border: solid 3px rgba(174, 0, 255, 0.318);
+}
+.success-p{
+    font-size: 20px;
+    color: white;
+}
+.modal-show{   
+    transition: opacity 1s;
+    display: none;
+}
+.modal-close{
+    color: white;
+    width: 140px;
+    height: 45px;
+    font-size: 17px;
+    background: linear-gradient(315deg, rgb(255, 135, 7), rgb(255, 1, 204));
+    border: none;
+    border-radius: 7%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.273);
+    transition: 0.5s;
+}
+.modal-close:hover{
+    transition: 0.5s;
+    box-shadow: inset 2px 2px rgba(0, 0, 0, 0.245);
+}
+.astro5{
+    height: 190px;
+}
+.error-p{
+    position: absolute;
+    top: 96%;
+    left: 22%;
+    color: red;
+}
+
+
+/* medias */ 
+@media (max-width: 1280px) {
+    .container-max{
+        height: 130vh;
+    }
+    .container-max .bg-span{
+        width: calc(10vw - 4px);
+        height: calc(10vw - 4px);
+    }
+}
+@media (max-width: 900px) {
+    .container-max .bg-span{
+        width: calc(10vw - 3px);
+        height: calc(10vw - 3px);
+    }
+}
+@media (max-width: 500px) {
+    .container-max .bg-span{
+        width: calc(13vw - 4px);
+        height: calc(13vw - 4px);
+    }
+    .container-max .contact-container .content-contact{
+        position: relative;
+        top: -30px;
+        gap: 20px;
+    }
+    .container-max .contact-container{
+        width: 200px;
+        height: 500px;
+        top: 9%;
+    }
+    .error-p{
+        left: 2%;
+    }
+    .input-box{
+        width: 50px;
+    }
+    .container-max .contact-container .content-contact .form .input-box{
+        width: 170px;
+    }
+    .container-max .contact-container .content-contact .form .input-box-message{
+        width: 170px;
+    }
+    .container-max .contact-container .content-contact .form .input-box-message textarea{
+        height: 70px;
+    }
+    .container-max .contact-container .content-contact .form .input-box input{
+        height: 15px;
+    }
+    .container-max .contact-container .content-contact .form .input-box i{
+        font-size: 14px;
+    }
+    .effect3{
+        position: absolute;
+        top: 100%;
+        left: -9%;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    ul .red-li{
+        width: 50px;
+        height: 50px;
+    }
+    .container-max .content-contact .form .input-box button{
+        width: 190px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 200;
+    }
+    .container-max .contact-container .content-contact h2{
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: 100;
+    }
+    .contact-container .content-contact .form .input-box input:focus ~ i, 
+    .contact-container .content-contact .form .input-box input:valid ~ i{
+        font-size: 0.5em;
+    }
+    ul .red-li:hover a .icon-span{
+        font-size: 12px;
+    }
+}
+@media (max-width: 360px) {
+    .container-max{
+        height: 110vh;
+    }
 }
